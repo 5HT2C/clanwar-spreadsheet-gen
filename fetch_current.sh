@@ -1,6 +1,7 @@
 #!/bin/bash
 
 source .env || exit 1
+[[ -d data/ ]] || mkdir data/
 
 F="data/war_tmp.json"
 curl -s -H "Authorization: Bearer $TOKEN" https://api.clashofclans.com/v1/clans/%23PV9P9JQ8/currentwar | jq > "$F"
