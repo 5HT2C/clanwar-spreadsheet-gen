@@ -1,0 +1,6 @@
+.idea/
+*.iml
+.env
+data/
+clanwar-spreadsheet-gen
+csg
