@@ -21,7 +21,7 @@ func main() {
 	flag.Parse()
 
 	if len(*file) == 0 {
-		log.Fatalf("-flag is required!\n")
+		log.Fatalf("-file is required!\n")
 	}
 
 	b, err := os.ReadFile(*file)
