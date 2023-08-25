@@ -1,7 +1,7 @@
 #!/bin/bash
 
 for f in data/war_#*; do
-    T0="$(date -d "$(echo "$f" | cut -c 21-36)" +%s)"
+    T0="$(date -d "$(echo "$f" | cut -d _ -f 3 | cut -d . -f 1)" +%s)"
     TAG="$(jq -r '.opponent.tag' "$f")"
 
     # If we haven't set F1, or the current unix T0 is greater than unix T1
